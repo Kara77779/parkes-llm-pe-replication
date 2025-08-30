@@ -44,30 +44,32 @@ parkes-llm-pe-replication/
    # OPENAI_API_KEY="sk-xxxxxxxx"
 
 ## Quick start
-# from this repo root
-# optional: point to authors’ repo if not at ~/alpha
-# export ALPHA_DIR="/abs/path/to/alpha"
-
+- small benchamrk (sanity check)
+```
+from this repo root
+bash scripts/run_first.sh
+open results/first            # macOS: open the folder
+```
+- full paper benchmark (threes)
+```
+from this repo root
+optional: point to authors’ repo if not at ~/alpha
+export ALPHA_DIR="/abs/path/to/alpha"
 bash scripts/run_threes.sh    # runs XOR/VD1/VD2/NVD/H sequentially and copies figures
 open results/threes
+```
 
 ## What we reproduce (Fig. 2)
 
-Efficiency vs. Interactions (on threes, 3 scenarios × 3 setups × 3 people) shows the expected trend:
-
-NVD reaches ~75% within ~2 interactions;
-
-VD2 within ~4 interactions;
-
-XOR around ~10 interactions;
-
-Hybrid rises fast initially and converges to the same optimum as XOR.
+- Efficiency vs. Interactions (on threes, 3 scenarios × 3 setups × 3 people) shows the expected trend:
+- NVD reaches ~75% within ~2 interactions;
+- VD2 within ~4 interactions;
+- XOR around ~10 interactions;
+- Hybrid rises fast initially and converges to the same optimum as XOR.
 
 See:
-
-results/threes/efficiency_threes.png
-
-results/threes/h_vs_xor_threes.png
+- results/threes/efficiency_threes.png
+- results/threes/h_vs_xor_threes.png
 
 We also include the small benchmark figures in results/first/ as a smoke test.
 
@@ -78,3 +80,7 @@ If you use this repo, please cite the original paper and code:
 Huang, Marmolejo-Cossío, Lock, Parkes (2025). Accelerated Preference Elicitation with LLM-Based Proxies.
 
 Code: https://github.com/davidzqhuang/alpha
+
+## License
+
+This wrapper repo is MIT-licensed. The original code is under its own license in the authors’ repo.
